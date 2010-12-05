@@ -1,0 +1,60 @@
+<html>
+	<head>
+	<script src="js/prototype.js" type="text/javascript" language="javascript"></script>
+	<script src="js/raphael-min.js" type="text/javascript" language="javascript"></script>	
+	<script src="js/grafico.base.js" type="text/javascript" language="javascript"></script>		
+	<script src="js/grafico.spark.js" type="text/javascript" language="javascript"></script>		
+	<script src="js/grafico.line.js" type="text/javascript" language="javascript"></script>		
+	<script src="js/grafico.bar.js" type="text/javascript" language="javascript"></script>		
+	
+	<style>
+	
+	#linegraph {
+		height: 700px;
+		width: 1100px;
+	}
+	
+	</style>
+	
+	</head>
+	
+<body>
+
+<div id="linegraph" class="example"></div>
+<script>
+Event.observe(window, 'load', function() {
+	var streamgraph2 = new Grafico.StreamGraph($('linegraph'),
+	{
+		1: [48,62,44,46,26,12,94,56,278,526,604,588,480,500,566,570,358,234,238,124,104,80,48,64],
+		2: [54,38,22,26,14,26,76,328,1144,2032,2040,1834,1738,1842,1540,1750,1500,1202,906,518,346,276,142,76],
+		3: [12,30,18,20,24,60,132,286,364,532,528,584,476,418,378,358,254,198,166,88,58,80,56,32],
+		4: [36,36,16,16,12,16,42,92,270,478,492,462,418,438,378,376,272,148,128,64,46,44,44,48],
+		5: [20,28,4,2,14,12,16,42,142,324,366,420,304,314,294,266,214,96,68,18,24,28,8,4]	},
+	{
+		grid: true,
+		show_horizontal_labels: true,
+		grid_color: "#eee",
+    colors:               {
+      1:       '#ddd',
+      2:  '#bbb',
+      3:  '#999',
+      4:  '#777',
+      5:   '#555'
+    },	
+		stream_smart_insertion: true,
+	  datalabels: {
+	    1:      "Municipal Licensing & Standards",
+	    2: "Solid Waste Management Services",
+	    3:  "Toronto Water",
+	    4:  "Transportation Services",
+	    5:  "Urban Forestry",		
+	  }
+	});
+});
+
+</script>
+
+
+</body>
+	
+</html>
