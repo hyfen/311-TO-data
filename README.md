@@ -7,5 +7,7 @@ A [screenshot](http://dl.dropbox.com/u/1144778/screencaps/cap_03012011_114911.pn
 - JOIN'd with [311 Service Request Codes](http://www.toronto.ca/open/datasets/311-service-request-codes/)
 
 # TODOs
-- manually create categories of request types (aim for about ~15)
-- script to take CSV data and produce array for graph
+
+<strike>manually create categories of request types (aim for about ~15)</strike> Done, but could use some tweaking
+
+<strike>script to take CSV data and produce array for graph</strike> Done, but could be a bit more automatic.
