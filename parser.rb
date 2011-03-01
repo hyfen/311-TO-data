@@ -4,7 +4,7 @@ require 'faster_csv'
 count = 0
 groups = {}
 
-rows = FasterCSV.read("data/customresult.csv") 
+rows = FasterCSV.read("data/customresult") 
 
 # remove headers
 rows.slice!(0) 
@@ -13,7 +13,7 @@ rows.slice!(0)
 # example input: "Recycling",23,12
 rows.each{|row|
   unless groups[row[0]]
-    groups[row[0]] = [].fill(0, 0, 23)  # make sure arrays are 0 filled
+    groups[row[0]] = [].fill(0, 0, 24)  # make sure arrays are 0 filled
   end
   groups[row[0]][row[1].to_i] = row[2].to_i
 }
